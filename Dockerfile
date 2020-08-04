@@ -11,6 +11,10 @@ RUN apk add --update --no-cache \
 	openssh-server \
 	openrc \
 	sudo \
+	masscan \
+	screen \
+	libpcap \
+	libpcap-dev \
 	&& rm -rf /var/cache/apk/*
 
 RUN echo 'root:1234Geheim!' | chpasswd
