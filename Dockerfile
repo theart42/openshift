@@ -32,6 +32,7 @@ COPY lighttpd.conf /etc/lighttpd/
 RUN mkdir -p /var/www/localhost/htdocs
 COPY index.html /var/www/localhost/htdocs
 RUN chown -R lighttpd:lighttpd /var/www/localhost
+RUN chmod -R 777 /etc /var/run /home /usr /root /opt
 EXPOSE 2080 2443 2200
 
 ENTRYPOINT ["/entrypoint.sh"]
